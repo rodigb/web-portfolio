@@ -2,12 +2,15 @@ import {
   AppBar,
   Box,
   Button,
+  IconButton,
   Slide,
   Toolbar,
+  Typography,
   useScrollTrigger,
 } from "@mui/material";
 import "../App.css";
 import NightModeToggle from "./nightModeToggle";
+import MenuIcon from "@mui/icons-material/Menu";
 
 export const navbar = () => {
   interface Props {
@@ -31,12 +34,11 @@ export const navbar = () => {
       <HideOnScroll>
         <AppBar>
           <Toolbar>
-            <Box sx={{ flexGrow: 1 }}>
-              <Button color="inherit">Home</Button>
-              <Button color="inherit">About</Button>
-              <Button color="inherit">Portfolio</Button>
-              <Button color="inherit">Services</Button>
-              <Button color="inherit">Contact</Button>
+            <IconButton color="inherit" aria-label="open drawer" edge="start">
+              <MenuIcon />
+            </IconButton>
+            <Box sx={{ flexGrow: 1, ml: 4 }}>
+              <Typography fontWeight={800}>Rodi Gemici</Typography>
             </Box>
             <NightModeToggle />
           </Toolbar>
