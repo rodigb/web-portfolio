@@ -1,6 +1,6 @@
 import { Box, Paper } from "@mui/material";
 
-export const homePage = () => {
+export const AboutPage = () => {
   return (
     <Box
       sx={{
@@ -13,9 +13,9 @@ export const homePage = () => {
         },
       }}
     >
-      <Paper elevation={2}> Home</Paper>
+      <Paper elevation={2}>About</Paper>
     </Box>
   );
 };
 
-export default homePage;
+export default AboutPage;

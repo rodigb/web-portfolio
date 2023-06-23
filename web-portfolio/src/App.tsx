@@ -5,6 +5,8 @@ import React from "react";
 import { CssBaseline, IconButton, ThemeProvider } from "@mui/material";
 
 import { useThemeContext } from "./theme/ThemeContextProvider";
+import WorkPage from "./pages/workPage";
+import AboutPage from "./pages/aboutPage";
 
 function App() {
   const { theme } = useThemeContext();
@@ -15,6 +17,8 @@ function App() {
 
         <Navbar />
         <HomePage />
+        <WorkPage />
+        <AboutPage />
       </ThemeProvider>
     </>
   );
