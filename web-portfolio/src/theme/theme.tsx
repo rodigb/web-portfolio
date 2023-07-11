@@ -68,7 +68,7 @@ const colorPalette: Palette = createPalette({
   },
   text: {
     primary: "hsla(0, 0%, 90%, 1)",
-    secondary: `black`,
+    secondary: `hsla(${secondaryHue}, 13%, 56%, 1)`,
     disabled: `hsla(${secondaryHue}, 13%, 56%, 0.5)`,
   },
 });
@@ -99,10 +99,10 @@ theme = createTheme(
       MuiCssBaseline: {
         styleOverrides: {
           html: {
-            background: colorPalette!.background!.default,
+            background: grey[300],
           },
           body: {
-            background: grey[300],
+            background: "white",
             height: "100vh",
             width: "100vw",
             position: "relative",
