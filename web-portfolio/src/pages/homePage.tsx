@@ -9,14 +9,16 @@ export const homePage = () => {
         flexWrap: "wrap",
         "& > :not(style)": {
           m: 25,
-          mt: 2,
+          mt: 0,
           width: "100%",
           height: "100%",
         },
       }}
     >
-      <Paper elevation={2} sx={{ p: 2 }}>
-        <Typography fontWeight={800}>My Work</Typography>
+      <Paper elevation={2} sx={{ border: "none" }}>
+        <Typography color={"black"} fontWeight={800}>
+          My Work
+        </Typography>
         <SidebarContentListGrid />
       </Paper>
     </Box>

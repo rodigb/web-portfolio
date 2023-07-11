@@ -4,13 +4,6 @@ import img2 from "./images/project2.png";
 import GridContent from "./sidebarContent.List.Grid,Content";
 
 function sidebarContentListGrid() {
-  const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-  }));
   return (
     <Box
       sx={{
@@ -24,11 +17,13 @@ function sidebarContentListGrid() {
         <Grid item md={6}>
           <GridContent
             image={img2}
-            title={"Project 1"}
+            title={"Dtime Data Search Portal"}
             description={
               "During my time at Dtime, I helped develop a data search portal for querying, searching, filtering and downloading of public datasets via an API to form JSON objects using Python, JavaScript, HTML and CSS with a team using agile software development."
             }
-            gradient={""}
+            gradient={
+              "linear-gradient(transparent 60%, rgba(0, 100, 0, 0.5) 70%, rgba(0, 100, 0, 0.75) 80%, rgb(0, 100, 0) 90%)"
+            }
           />
         </Grid>
         <Grid item md={6}>

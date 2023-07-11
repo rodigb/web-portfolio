@@ -1,4 +1,5 @@
-import { Box, Paper, Typography } from "@mui/material";
+import { Box, Paper, Stack, Typography } from "@mui/material";
+import { grey } from "@mui/material/colors";
 import React from "react";
 
 const GridContent = ({
@@ -17,8 +18,9 @@ const GridContent = ({
       sx={{
         height: 400,
         width: "100%",
+        border: "none",
         backgroundColor: (theme) =>
-          theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+          theme.palette.mode === "dark" ? `${grey[400]}` : "#fff",
       }}
     >
       <Box position="relative" display="inline-block" sx={{ height: "100%" }}>
@@ -30,6 +32,7 @@ const GridContent = ({
             height: "100%",
             width: "100%",
             zIndex: "0",
+            bgcolor: "black",
           }}
           src={image}
         />
@@ -40,10 +43,15 @@ const GridContent = ({
           left={0}
           width="100%"
           height="100%"
-          sx={{}}
+          sx={{ background: `${gradient}` }}
         ></Box>
-        <Box sx={{ position: "absolute", bottom: 0, p: 2 }}>
-          <Typography>{description}</Typography>
+        <Box sx={{ position: "absolute", bottom: 0, p: 1 }}>
+          <Stack>
+            <Typography pb={1} fontWeight={800}>
+              {title}
+            </Typography>
+            <Typography>{description}</Typography>
+          </Stack>
         </Box>
       </Box>
     </Paper>

@@ -5,7 +5,10 @@ import { MyListComponentProps } from "./interfaces";
 const MyListComponent: React.FC<MyListComponentProps> = ({ items, title }) => {
   return (
     <List disablePadding sx={{ justifyContent: "flex-start", pl: 2 }}>
-      <Typography sx={{ pl: 0, fontWeight: "bold" }} variant="subtitle1">
+      <Typography
+        sx={{ pl: 0, fontWeight: "bold", color: "black" }}
+        variant="subtitle1"
+      >
         {title}
       </Typography>
       {items.map((item, index) => (
@@ -13,7 +16,7 @@ const MyListComponent: React.FC<MyListComponentProps> = ({ items, title }) => {
           <ListItemText
             disableTypography
             primary={
-              <Typography variant="caption" style={{ color: "white" }}>
+              <Typography variant="caption" style={{ color: "black" }}>
                 {item.text}
               </Typography>
             }

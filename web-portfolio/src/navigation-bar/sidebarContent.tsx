@@ -36,7 +36,12 @@ function sidebarContent() {
   return (
     <Box sx={{ ml: 10 }}>
       <Stack direction="row" spacing={2}>
-        <Typography sx={{ mr: 5 }} variant="h5" fontWeight={"bold"}>
+        <Typography
+          sx={{ mr: 5 }}
+          variant="h5"
+          fontWeight={"bold"}
+          color={"black"}
+        >
           Rodi Gemici.
         </Typography>
         <Box sx={{ p: 1 }}>{socialIcons}</Box>

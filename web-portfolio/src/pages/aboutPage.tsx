@@ -13,7 +13,9 @@ export const AboutPage = () => {
         },
       }}
     >
-      <Paper elevation={2}>About</Paper>
+      <Paper elevation={2} sx={{ border: "none" }}>
+        About
+      </Paper>
     </Box>
   );
 };

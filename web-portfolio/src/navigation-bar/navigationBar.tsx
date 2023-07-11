@@ -65,7 +65,7 @@ export const Navbar = () => {
             onClick={toggleDrawer}
             sx={{ m: 0 }}
           >
-            <CloseIcon />
+            <CloseIcon sx={{ color: "black" }} />
           </IconButton>
           <SidebarContent />
         </Box>

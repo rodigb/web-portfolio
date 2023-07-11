@@ -45,7 +45,7 @@ const colorPalette: Palette = createPalette({
   },
   background: {
     default: grey[900],
-    paper: `hsla(210, 13%, 24%, 1)`,
+    paper: `white`,
     mainScreenPaper: `hsla(210, 13%, 24%, 1)`,
     statusBar: `hsla(204, 22%, 13%, 1)`,
     headerBackground: `hsla(204, 22%, 13%, 1)`,
@@ -68,7 +68,7 @@ const colorPalette: Palette = createPalette({
   },
   text: {
     primary: "hsla(0, 0%, 90%, 1)",
-    secondary: `hsla(${secondaryHue}, 13%, 56%, 1)`,
+    secondary: `black`,
     disabled: `hsla(${secondaryHue}, 13%, 56%, 0.5)`,
   },
 });
@@ -102,7 +102,7 @@ theme = createTheme(
             background: colorPalette!.background!.default,
           },
           body: {
-            background: ["hsla(210, 17%, 2%, 1)"],
+            background: grey[300],
             height: "100vh",
             width: "100vw",
             position: "relative",
