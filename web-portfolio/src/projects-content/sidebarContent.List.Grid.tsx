@@ -1,10 +1,7 @@
-import { Box, Grid, Paper, styled } from "@mui/material";
+import { Box, Grid, Paper, Typography, styled } from "@mui/material";
 import React from "react";
-import img1 from "./images/img1.jpg";
-import img2 from "./images/img2.jpg";
-import img3 from "./images/img3.jpg";
-import img4 from "./images/img4.jpg";
-import img5 from "./images/img5.jpg";
+import img2 from "./images/project2.png";
+import GridContent from "./sidebarContent.List.Grid,Content";
 
 function sidebarContentListGrid() {
   const Item = styled(Paper)(({ theme }) => ({
@@ -25,13 +22,13 @@ function sidebarContentListGrid() {
     >
       <Grid container spacing={4}>
         <Grid item md={6}>
-          <Paper
-            sx={{
-              height: 400,
-              width: "100%",
-              backgroundColor: (theme) =>
-                theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-            }}
+          <GridContent
+            image={img2}
+            title={"Project 1"}
+            description={
+              "During my time at Dtime, I helped develop a data search portal for querying, searching, filtering and downloading of public datasets via an API to form JSON objects using Python, JavaScript, HTML and CSS with a team using agile software development."
+            }
+            gradient={""}
           />
         </Grid>
         <Grid item md={6}>
@@ -45,74 +42,25 @@ function sidebarContentListGrid() {
           />
         </Grid>
         <Grid item md={4}>
-          <Paper
-            sx={{
-              height: 400,
-              width: "100%",
-              backgroundColor: (theme) =>
-                theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-            }}
-          />
+          <GridContent image={""} title={""} description={""} gradient={""} />
         </Grid>
         <Grid item md={4}>
-          <Paper
-            sx={{
-              height: 400,
-              width: "100%",
-              backgroundColor: (theme) =>
-                theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-            }}
-          />
+          <GridContent image={""} title={""} description={""} gradient={""} />
         </Grid>
         <Grid item md={4}>
-          <Paper
-            sx={{
-              height: 400,
-              width: "100%",
-              backgroundColor: (theme) =>
-                theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-            }}
-          />
+          <GridContent image={""} title={""} description={""} gradient={""} />
         </Grid>
         <Grid item md={3}>
-          <Paper
-            sx={{
-              height: 400,
-              width: "100%",
-              backgroundColor: (theme) =>
-                theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-            }}
-          />
+          <GridContent image={""} title={""} description={""} gradient={""} />
         </Grid>
         <Grid item md={3}>
-          <Paper
-            sx={{
-              height: 400,
-              width: "100%",
-              backgroundColor: (theme) =>
-                theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-            }}
-          />
+          <GridContent image={""} title={""} description={""} gradient={""} />
         </Grid>
         <Grid item md={3}>
-          <Paper
-            sx={{
-              height: 400,
-              width: "100%",
-              backgroundColor: (theme) =>
-                theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-            }}
-          />
+          <GridContent image={""} title={""} description={""} gradient={""} />
         </Grid>
         <Grid item md={3}>
-          <Paper
-            sx={{
-              height: 400,
-              width: "100%",
-              backgroundColor: (theme) =>
-                theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-            }}
-          />
+          <GridContent image={""} title={""} description={""} gradient={""} />
         </Grid>
       </Grid>
     </Box>

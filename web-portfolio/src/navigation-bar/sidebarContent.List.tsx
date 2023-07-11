@@ -7,7 +7,6 @@ import {
   Typography,
 } from "@mui/material";
 import SidebarContentListItems from "./sidebarContent.List.Items";
-import SidebarContentListGrid from "../projects-content/sidebarContent.List.Grid";
 
 function sidebarContentList() {
   const projectItems = [
@@ -27,9 +26,7 @@ function sidebarContentList() {
       <Stack direction="row" spacing={10} sx={{ p: 2 }}>
         <SidebarContentListItems title={"CV"} items={cvItems} />
       </Stack>
-      <Stack direction="row" spacing={10} sx={{ p: 2 }}>
-        <SidebarContentListGrid />
-      </Stack>
+      <Stack direction="row" spacing={10} sx={{ p: 2 }}></Stack>
     </Box>
   );
 }

@@ -1,4 +1,4 @@
-import { Box, Paper } from "@mui/material";
+import { Box, Paper, Typography } from "@mui/material";
 import SidebarContentListGrid from "../projects-content/sidebarContent.List.Grid";
 
 export const homePage = () => {
@@ -8,14 +8,15 @@ export const homePage = () => {
         display: "flex",
         flexWrap: "wrap",
         "& > :not(style)": {
-          m: 10,
+          m: 25,
+          mt: 2,
           width: "100%",
           height: "100%",
         },
       }}
     >
       <Paper elevation={2} sx={{ p: 2 }}>
-        Home
+        <Typography fontWeight={800}>My Work</Typography>
         <SidebarContentListGrid />
       </Paper>
     </Box>
