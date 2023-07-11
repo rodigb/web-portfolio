@@ -4,12 +4,10 @@ import HomePage from "./pages/homePage";
 import React from "react";
 import { CssBaseline, IconButton, ThemeProvider } from "@mui/material";
 
-import { useThemeContext } from "./theme/ThemeContextProvider";
 import WorkPage from "./pages/workPage";
 import AboutPage from "./pages/aboutPage";
-
+import theme from "./theme/theme";
 function App() {
-  const { theme } = useThemeContext();
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -17,8 +15,6 @@ function App() {
 
         <Navbar />
         <HomePage />
-        <WorkPage />
-        <AboutPage />
       </ThemeProvider>
     </>
   );

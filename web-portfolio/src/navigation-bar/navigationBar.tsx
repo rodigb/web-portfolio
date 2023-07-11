@@ -1,7 +1,8 @@
+import React, { useState } from "react";
 import {
   AppBar,
   Box,
-  Button,
+  Drawer,
   IconButton,
   Slide,
   Toolbar,
@@ -9,10 +10,13 @@ import {
   useScrollTrigger,
 } from "@mui/material";
 import "../App.css";
-import NightModeToggle from "./nightModeToggle";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import SidebarContent from "./sidebarContent";
 
-export const navbar = () => {
+export const Navbar = () => {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
   interface Props {
     children: React.ReactElement;
   }
@@ -29,23 +33,45 @@ export const navbar = () => {
     );
   }
 
+  const toggleDrawer = () => {
+    setIsDrawerOpen(!isDrawerOpen);
+  };
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <HideOnScroll>
         <AppBar>
           <Toolbar>
-            <IconButton color="inherit" aria-label="open drawer" edge="start">
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={toggleDrawer}
+            >
               <MenuIcon />
             </IconButton>
             <Box sx={{ flexGrow: 1, ml: 4 }}>
-              <Typography fontWeight={800}>Rodi Gemici</Typography>
+              <Typography sx={{ fontWeight: "bold" }}>Rodi Gemici</Typography>
             </Box>
-            <NightModeToggle />
           </Toolbar>
         </AppBar>
       </HideOnScroll>
+      <Drawer anchor="left" open={isDrawerOpen} onClose={toggleDrawer}>
+        <Box sx={{ width: "28vw" }}>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={toggleDrawer}
+            sx={{ m: 0 }}
+          >
+            <CloseIcon />
+          </IconButton>
+          <SidebarContent />
+        </Box>
+      </Drawer>
     </Box>
   );
 };
 
-export default navbar;
+export default Navbar;
