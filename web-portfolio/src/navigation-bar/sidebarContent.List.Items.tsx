@@ -4,9 +4,9 @@ import { MyListComponentProps } from "./interfaces";
 
 const MyListComponent: React.FC<MyListComponentProps> = ({ items, title }) => {
   return (
-    <List disablePadding sx={{ justifyContent: "flex-start", pl: 2 }}>
+    <List disablePadding sx={{ justifyContent: "flex-start", p: 2 }}>
       <Typography
-        sx={{ pl: 0, fontWeight: "bold", color: "black" }}
+        sx={{ fontWeight: "bold", color: "black" }}
         variant="subtitle1"
       >
         {title}

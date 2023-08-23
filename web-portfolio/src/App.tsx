@@ -15,7 +15,7 @@ function App() {
 
         <Navbar />
         <HomePage />
-        <WorkPage />
+        {/* <WorkPage /> */}
       </ThemeProvider>
     </>
   );

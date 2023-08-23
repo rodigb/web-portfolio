@@ -1,64 +1,89 @@
+import React from "react";
 import { Box, Paper, Typography } from "@mui/material";
-import SidebarContentListGrid from "../projects-content/sidebarContent.List.Grid";
-import img from "./images/bgimg.jpg";
+import Typewriter from "typewriter-effect";
+import img from "./images/img1.jpg";
 
-export const homePage = () => {
+const Home = () => {
+  const typewriterStrings = [
+    "I Am A Frontend Developer!",
+    "I have a keen interest in UX/UI Design!",
+    "I Am A Web Developer!",
+  ];
+
   return (
     <Box
       sx={{
         display: "flex",
-        flexWrap: "wrap",
-        "& > :not(style)": {
-          mt: 0,
-          width: "100vw",
-          height: "100vh",
-          bgcolor: "black",
-        },
+        justifyContent: "center",
+        alignItems: "center",
+        width: "100vw",
+        height: "100vh",
+        bgcolor: "black",
       }}
     >
       <Paper elevation={2} sx={{ border: "none", display: "flex" }}>
         <Box
-          component="img"
-          alt="Project 1."
           sx={{
-            mt: 0,
             width: "60vw",
             height: "100vh",
-            bgcolor: "red",
-          }}
-          src={img}
-        ></Box>{" "}
-        <Box
-          component="div"
-          sx={{
-            position: "absolute",
-            left: 0,
-            width: "60vw",
-            height: "100vh",
-            backgroundImage:
-              "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.74))",
-          }}
-        ></Box>
-        <Box
-          sx={{
-            mt: 0,
-            width: "40vw",
-            height: "100vh",
+            bgcolor: "white",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            padding: "0 10%",
           }}
         >
-          <Typography color={"white"} fontWeight={800}>
-            Hi, I'm Rodi Gemici Bektas, a front-end developer passionate about
-            creating exceptional web experiences. With expertise in HTML, CSS,
-            JavaScript I specialize in crafting intuitive and visually appealing
-            interfaces. From responsive designs to interactive features, I
-            strive to deliver seamless user interactions. Explore my portfolio
-            to see examples of my work and let's collaborate to bring your ideas
-            to life!
-          </Typography>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              width: "100%",
+              height: "100%",
+              mb: 10,
+            }}
+          >
+            <Typography variant="h2" fontWeight={600} color="black">
+              Hello,
+            </Typography>
+            <Typography variant="h2" fontWeight={600} color="black">
+              My Name Is
+            </Typography>
+            <Typography
+              width="100%"
+              variant="h2"
+              fontWeight={600}
+              color="white"
+              bgcolor="black"
+            >
+              Rodi Gemici Bektas
+            </Typography>
+            <Typography variant="h2" fontWeight={600} color="black">
+              <Typewriter
+                options={{
+                  strings: typewriterStrings,
+                  deleteSpeed: 2,
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </Typography>
+          </Box>
         </Box>
+        <Box
+          component="img"
+          sx={{
+            mt: 0,
+            mr: 10,
+            width: "50vw",
+            height: "100vh",
+          }}
+          src={img}
+          alt="Background"
+        />
       </Paper>
     </Box>
   );
 };
 
-export default homePage;
+export default Home;

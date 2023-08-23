@@ -38,7 +38,7 @@ export const Navbar = () => {
   };
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1, position: "fixed", width: "100vw" }}>
       <HideOnScroll>
         <AppBar>
           <Toolbar>
@@ -57,7 +57,7 @@ export const Navbar = () => {
         </AppBar>
       </HideOnScroll>
       <Drawer anchor="left" open={isDrawerOpen} onClose={toggleDrawer}>
-        <Box sx={{ width: "28vw" }}>
+        <Box sx={{ width: "100%" }}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
